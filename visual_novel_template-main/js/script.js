@@ -90,7 +90,7 @@ monogatari.script ({
             'show image alice23 with fadeIn',
             '"You are old, Father Senyo,” the young dude said, "And you have become a pro gamer"',
             '"And yet you incessantly flame people online. Do you think, at your age, it is right?"',
-            '"In my youth," Father Senyo replied to his son, "I feared it might injure the brain"',
+            '"In my youth," Father Senyo replied to her son, "I feared it might injure the brain"',
             '"But, now that I’m perfectly sure I have none. Why, I do it again and again.',
             'hide image alice23 with fadeOut',
             'jump Next'
@@ -100,7 +100,7 @@ monogatari.script ({
             'show image alice24 with fadeIn',
             '"You are old," said Tubbs, "as I mentioned before, and have grown most uncommonly weird"',
             '"Yet you turned a back-somersault in at the door.  Pray, what is the reason of that?"',
-            '"In my youth," said the cat, as he ate all the food, "I kept all my limbs very supple"',
+            '"In my youth," as he ate all the food, "I kept all my limbs very supple"',
             '"By the use of this ointment — one shilling the box — Allow me to sell you a couple?"',
             'hide image alice24 with fadeOut',
 						'jump Next2'
