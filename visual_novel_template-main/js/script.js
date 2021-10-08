@@ -57,7 +57,8 @@ monogatari.assets ('voices', {
 
 // Define the sounds used in the game.
 monogatari.assets ('sounds', {
-
+		door: "door_open.mp4",
+		coffee: "make_coffee.mp4"
 });
 
 // Define the videos used in the game.
@@ -67,6 +68,11 @@ monogatari.assets ('videos', {
 
 // Define the images used in the game.
 monogatari.assets ('images', {
+//		cat: "cat.PNG",
+//		capybara: "capybara.PNG",
+		frog: "frog.GIF",
+		latte: "latte.GIF",
+
     alice23: "senyo.PNG",
     alice24: "IMG_8745.jpg",
 		lex: "lexieieie.JPG"
@@ -87,43 +93,49 @@ monogatari.characters ({
 monogatari.script ({
 
 	'Start': [
-            'show image alice23 with fadeIn',
-            '"You are old, Father Senyo,” the young dude said, "And you have become a pro gamer"',
-            '"And yet you incessantly flame people online. Do you think, at your age, it is right?"',
-            '"In my youth," Father Senyo replied to her son, "I feared it might injure the brain"',
-            '"But, now that I’m perfectly sure I have none. Why, I do it again and again.',
-            'hide image alice23 with fadeOut',
-            'jump Next'
-        ],
+						'play sound door with volume 50', //sound not working
+            'show image frog with fadeIn',
+            'Welcome, what can I get you?',
+            '"Hmmmmmm"',
+            '"Hmmmmmmmmmm"',
+            '... Is everything alright?',
+						'"latte"',
+						//can i add a "make coffee button" that plays the sound?
+						'play sound coffee with volume 50',
+						'show image latte with fadeIn', //how to change location?
+            'hide image frog with fadeOut',
+						'end'
+            //'jump Next'
 
-        'Next': [
-            'show image alice24 with fadeIn',
-            '"You are old," said Tubbs, "as I mentioned before, and have grown most uncommonly weird"',
-            '"Yet you turned a back-somersault in at the door.  Pray, what is the reason of that?"',
-            '"In my youth," as he ate all the food, "I kept all my limbs very supple"',
-            '"By the use of this ointment — one shilling the box — Allow me to sell you a couple?"',
-            'hide image alice24 with fadeOut',
-						'jump Next2'
-					],
-				'Next2': [
-		        'show image lex with fadeIn',
-		        '"heheehhehehehhehe," said Lexie',
-		        'hide image lex with fadeOut',
-            'end'
+
+      //  'Next': [
+      //      'show image alice24 with fadeIn',
+      //      '"You are old," said Tubbs, "as I mentioned before, and have grown most uncommonly weird"',
+      //      '"Yet you turned a back-somersault in at the door.  Pray, what is the reason of that?"',
+      //      '"In my youth," as he ate all the food, "I kept all my limbs very supple"',
+      //      '"By the use of this ointment — one shilling the box — Allow me to sell you a couple?"',
+      //      'hide image alice24 with fadeOut',
+			//			'jump Next2'
+			//		],
+			//	'Next2': [
+		   //     'show image lex with fadeIn',
+		   //     '"heheehhehehehhehe," said Lexie',
+		   //     'hide image lex with fadeOut',
+      //      'end'
 	]
 });
 
 
 monogatari.component ('main-screen').template (() => {
     return `
-        <h1>my weirdo frends</h1>
+        <h1>coffee shop ~</h1>
         <br/>
         <p>
-        awajskldjaklwajdopsjfdks.
+        serve coffee! talk to your customers!
         </p>
         <br/>
         <center>
-        <img src="assets/images/IMG_8407.JPG" height="50%"/>
+        <img src="assets/images/frog.gif" height="50%"/>
         </center>
 
         <main-menu></main-menu>
