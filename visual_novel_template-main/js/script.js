@@ -70,8 +70,8 @@ monogatari.assets ('videos', {
 monogatari.assets ('images', {
 //		cat: "cat.PNG",
 //		capybara: "capybara.PNG",
-		frog: "frog.GIF",
-		latte: "latte.GIF",
+		frog: "frog.gif",
+		latte: "latte.gif",
 
     alice23: "senyo.PNG",
     alice24: "IMG_8745.jpg",
