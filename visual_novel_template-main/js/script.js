@@ -57,8 +57,8 @@ monogatari.assets ('voices', {
 
 // Define the sounds used in the game.
 monogatari.assets ('sounds', {
-		door: "door_open.mp4",
-		coffee: "make_coffee.mp4"
+		door: "door_open.mp3",
+		coffee: "make_coffee.mp3"
 });
 
 // Define the videos used in the game.
@@ -93,7 +93,7 @@ monogatari.characters ({
 monogatari.script ({
 
 	'Start': [
-						'play sound door with volume 50', //sound not working
+						'play sound door', //sound not working
             'show image frog with fadeIn',
             'Welcome, what can I get you?',
             '"Hmmmmmm"',
@@ -101,7 +101,7 @@ monogatari.script ({
             '... Is everything alright?',
 						'"latte"',
 						//can i add a "make coffee button" that plays the sound?
-						'play sound coffee with volume 50',
+						'play sound coffee',
 						'show image latte with fadeIn', //how to change location?
             'hide image frog with fadeOut',
 						'end'
