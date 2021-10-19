@@ -72,10 +72,8 @@ monogatari.assets ('images', {
 //		capybara: "capybara.PNG",
 		frog: "frog.gif",
 		latte: "latte.gif",
+		espresso: "espresso.gif",
 
-    alice23: "senyo.PNG",
-    alice24: "IMG_8745.jpg",
-		lex: "lexieieie.JPG"
 });
 
 // Define the backgrounds for each scene.
@@ -93,18 +91,57 @@ monogatari.characters ({
 monogatari.script ({
 
 	'Start': [
-						'play sound door', //sound not working
-            'show image frog with fadeIn',
-            'Welcome, what can I get you?',
-            '"Hmmmmmm"',
-            '"Hmmmmmmmmmm"',
-            '... Is everything alright?',
-						'"latte"',
+				'play sound door', //sound not working
+        'show image frog with fadeIn',
+        'Welcome, what can I get you?',
+        '"hmmmmmm"',
+				'"i will have a latte"',
+				{'Choice':{
+					'Latte':{
+						'Text': 'Make a latte',
+						'Do': 'jump MakingLatte'
+					},
+					'Espresso':{
+						'Text': 'Make an espresso',
+						'Do': 'jump MakingEspresso'
+					}
+				}}
+
+		],
+
+			'MakingLatte': [
+				'hide image frog with fadeOut',
+				'play sound coffee',
+				'show image latte with fadeIn',
+				'jump MadeLatte'
+			],
+
+			'MadeLatte': [
+				'hide image latte with fadeOut',
+				'show image frog with fadeIn',
+				'"5/10 latte"',
+				'end'
+			],
+
+			'MakingEspresso': [
+				'hide image frog with fadeOut',
+				'play sound coffee',
+				'show image espresso with fadeIn',
+				'jump MadeEspresso'
+			],
+
+			'MadeEspresso': [
+				'hide image espresso with fadeOut',
+				'show image frog with fadeIn',
+				'"this is not a latte. 0/10"',
+				'end'
+			]
+		});
 						//can i add a "make coffee button" that plays the sound?
-						'play sound coffee',
-						'show image latte with fadeIn', //how to change location?
-            'hide image frog with fadeOut',
-						'end'
+			//			'play sound coffee',
+		//				'show image latte with fadeIn', //how to change location?
+        //    'hide image frog with fadeOut',
+					//	'end'
             //'jump Next'
 
 
@@ -122,8 +159,8 @@ monogatari.script ({
 		   //     '"heheehhehehehhehe," said Lexie',
 		   //     'hide image lex with fadeOut',
       //      'end'
-	]
-});
+	
+
 
 
 monogatari.component ('main-screen').template (() => {
